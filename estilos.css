@@ -1,0 +1,40 @@
+body{
+    background-color: slategray;
+}
+
+.titulo{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 200px;
+}
+h1{
+    color:white;
+    width: fit-content;
+    margin: auto;
+    background-color: rgb(76, 10, 190);
+    font-size: 3rem;
+    border-style: dotted;
+    border-radius: 200px;
+}
+.container{
+    margin:auto;
+    height: fit-content;
+    width:fit-content;
+    display:block;
+    
+}
+
+a{
+    outline: none;
+    text-decoration: none ;
+}
+
+#reloj , #actividades{
+    font-size: 50px;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(246, 246, 18, 0.417);
+    text-align: center;
+}
