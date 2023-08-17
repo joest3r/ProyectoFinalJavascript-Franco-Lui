@@ -1,26 +1,25 @@
 (function() {
     actualizarReloj = function(){
 
-    var fecha = new Date();
-    var hora = fecha.getHours();
-    var mins = fecha.getMinutes();
-    var seconds = fecha.getSeconds();
-    var dia = fecha.getDate();
-    var diaS = fecha.getDay();
-    var mes = fecha.getMonth();
-    var anio = fecha.getFullYear();
-    var ampm;
-
-    var Phoras = document.getElementById('hora');
-    var Pmins = document.getElementById('minutos');
-    var Psecs = document.getElementById('segundos');
-    var Pdiasemana = document.getElementById('diaSemana');
-    var Pdia = document.getElementById('dia');
-    var Pmes = document.getElementById('mes');
-    var Panio = document.getElementById('anio');
-    var Pampm = document.getElementById('ampm');
-    var semana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
-    var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    let fecha = new Date();
+    let hora = fecha.getHours();
+    let mins = fecha.getMinutes();
+    let seconds = fecha.getSeconds();
+    let dia = fecha.getDate();
+    let diaS = fecha.getDay();
+    let mes = fecha.getMonth();
+    let anio = fecha.getFullYear();
+    let ampm;
+    let Phoras = document.getElementById('hora');
+    let Pmins = document.getElementById('minutos');
+    let Psecs = document.getElementById('segundos');
+    let Pdiasemana = document.getElementById('diaSemana');
+    let Pdia = document.getElementById('dia');
+    let Pmes = document.getElementById('mes');
+    let Panio = document.getElementById('anio');
+    let Pampm = document.getElementById('ampm');
+    let semana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+    let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     
     Pdiasemana.textContent = semana[diaS];
     Pdia.textContent = dia;
@@ -51,4 +50,40 @@
 
 actualizarReloj();
 var intervalo = setInterval(actualizarReloj,1000);
+
 }())
+
+let dyn = true;
+function diaynoche(){
+
+    var elemento = document.getElementById('contenedor');
+
+    var boton = document.getElementById('bt-change');
+
+    if(dyn == true){
+    
+    elemento.classList.toggle('noche');
+
+    document.body.style.backgroundImage = "url('cudilleron.jpg')";
+
+    boton.innerText = 'Día';
+
+    dyn=false;
+
+    
+    }
+
+    else{
+    
+    elemento.classList.toggle('noche');
+
+    boton.innerText = 'Noche';
+
+    document.body.style.backgroundImage = "url('cudillero.jpg')";
+    
+    dyn=true;
+
+    }
+
+}
+

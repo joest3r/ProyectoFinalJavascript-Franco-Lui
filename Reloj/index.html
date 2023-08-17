@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reloj</title>
-    <link rel="stylesheet" href="estilos.css">
-    
 </head>
 <body>
-    
-    <div class="contenedor">
+    <a href="../index.html"><p id="back">Volver</p></a>
+    <div class="contenedor" id="contenedor">
+
+        <button class="bt-change" id="bt-change"  onclick="diaynoche()">Noche</button>
         <div class="widget">
+            
             <div class="fecha">
                     <p id="diaSemana" class="diaSemana"></p>
                     <p id="dia" class="dia"></p>
@@ -34,5 +35,6 @@
     </div>
 
     <script src="app.js"></script>
+    <link rel="stylesheet" href="estilos.css">
 </body>
 </html>
